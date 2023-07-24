@@ -1301,8 +1301,8 @@ html {
     4px
     transparent;
   background-image: linear-gradient(
-      #212121,
-      #212121
+      #0f172a,
+      #0f172a
     ),
     linear-gradient(
       137.48deg,
@@ -1554,6 +1554,263 @@ strong {
   }
 }
 
+/* EFEK NAV */
+
+#logo,
+#logo::after {
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  position: relative;
+}
+
+#logo::after {
+  --move1: inset(
+    50%
+      50%
+      50%
+      50%
+  );
+  --move2: inset(
+    31% 0
+      40%
+      0
+  );
+  --move3: inset(
+    39% 0
+      15%
+      0
+  );
+  --move4: inset(
+    45% 0
+      40%
+      0
+  );
+  --move5: inset(
+    45% 0
+      6% 0
+  );
+  --move6: inset(
+    14% 0
+      61%
+      0
+  );
+  -webkit-clip-path: var(
+    --move1
+  );
+          clip-path: var(
+    --move1
+  );
+  content: "_ - =- _=_--";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+#logo:hover::after {
+  animation: glitch_4011
+    1s;
+  text-shadow: 10
+    10px
+    10px
+    black;
+  animation-timing-function: steps(
+    2,
+    end
+  );
+  text-shadow:
+    -3px -3px
+      0px #1df2f0,
+    3px
+      3px
+      0px
+      #e94be8;
+  background-color: transparent;
+  border: 3px
+    solid
+    rgb(
+      0,
+      255,
+      213
+    );
+}
+
+#logo:hover {
+  text-shadow:
+    -1px -1px
+      0px #06b6d4,
+    1px
+      1px
+      0px
+      #06b6d4;
+  background-color: transparent;
+  border: 1px
+    solid
+    rgb(
+      0,
+      255,
+      213
+    );
+  box-shadow: 0px
+    10px
+    10px -10px
+    rgb(
+      0,
+      255,
+      213
+    );
+}
+
+@keyframes glitch_4011 {
+  0% {
+    -webkit-clip-path: var(
+      --move1
+    );
+            clip-path: var(
+      --move1
+    );
+    transform: translate(
+      0px,
+      -10px
+    );
+  }
+
+  10% {
+    -webkit-clip-path: var(
+      --move2
+    );
+            clip-path: var(
+      --move2
+    );
+    transform: translate(
+      -10px,
+      10px
+    );
+  }
+
+  20% {
+    -webkit-clip-path: var(
+      --move3
+    );
+            clip-path: var(
+      --move3
+    );
+    transform: translate(
+      10px,
+      0px
+    );
+  }
+
+  30% {
+    -webkit-clip-path: var(
+      --move4
+    );
+            clip-path: var(
+      --move4
+    );
+    transform: translate(
+      -10px,
+      10px
+    );
+  }
+
+  40% {
+    -webkit-clip-path: var(
+      --move5
+    );
+            clip-path: var(
+      --move5
+    );
+    transform: translate(
+      10px,
+      -10px
+    );
+  }
+
+  50% {
+    -webkit-clip-path: var(
+      --move6
+    );
+            clip-path: var(
+      --move6
+    );
+    transform: translate(
+      -10px,
+      10px
+    );
+  }
+
+  60% {
+    -webkit-clip-path: var(
+      --move1
+    );
+            clip-path: var(
+      --move1
+    );
+    transform: translate(
+      10px,
+      -10px
+    );
+  }
+
+  70% {
+    -webkit-clip-path: var(
+      --move3
+    );
+            clip-path: var(
+      --move3
+    );
+    transform: translate(
+      -10px,
+      10px
+    );
+  }
+
+  80% {
+    -webkit-clip-path: var(
+      --move2
+    );
+            clip-path: var(
+      --move2
+    );
+    transform: translate(
+      10px,
+      -10px
+    );
+  }
+
+  90% {
+    -webkit-clip-path: var(
+      --move4
+    );
+            clip-path: var(
+      --move4
+    );
+    transform: translate(
+      -10px,
+      10px
+    );
+  }
+
+  100% {
+    -webkit-clip-path: var(
+      --move1
+    );
+            clip-path: var(
+      --move1
+    );
+    transform: translate(
+      0
+    );
+  }
+}
+
+/* tombol next blok */
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1731,12 +1988,24 @@ strong {
     display: none;
   }
 
+  .lg\:h-16 {
+    height: 4rem;
+  }
+
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
 
   .lg\:w-2\/3 {
     width: 66.666667%;
+  }
+
+  .lg\:w-64 {
+    width: 16rem;
   }
 
   .lg\:w-\[217px\] {
